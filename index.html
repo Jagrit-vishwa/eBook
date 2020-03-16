@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ebook</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
+            body{
+             background-image:url("Interface-Final.png") ;
+             background-repeat: no-repeat;
+             background-size: 100% 110%;
+            }
+            #main{
+                min-height: 95.6vh;
+                width: 1150px;
+                padding: 0px;
+                
+                
+            }
+            #z{
+                background-image:url("Pages_Base.png");
+                 background-repeat: no-repeat;
+                 background-size: 100% 100%;
+                min-height: 85vh;
+                float: left;
+            }
+            #y{
+                background-image: url("Seekbar.png");
+                height: 55px;
+            }
+            .ch{
+                background-image: url("Ch_Button.png");
+                border: none;
+                height: 45px; 
+                width: 160px;
+                background-size: 103% 113%;
+                border-radius: 5px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                padding-left:25px;
+            }
+            #p{
+                background-image: url("Animation_Button.png");
+                border: none;
+                background-size: 100% 100%;
+                border-radius: 5px;
+                height: 40px;
+                width: 101px;
+            }
+           
+            .on-scrollbar {
+               height: 70vh;
+                width: 190px;
+                overflow: auto;
+            }
+            .ch:hover {
+                background-image: url("Button_Hover.png");
+                border: none;
+                height: 45px; 
+                width: 160px;
+                background-size: 100.5% 102%;
+                border-radius: 5px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                background-color: black;
+            }
+            .on-scrollbar {
+            height: 70vh;
+            width: 190px;
+            overflow: hidden;
+        }
+
+        .on-scrollbar:hover {
+            overflow: auto;
+        }
+
+        .on-scrollbar::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .on-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #babebf;
+            background-clip: padding-box;
+            border-radius: 6px;
+        }
+
+        .on-scrollbar::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+            .tooltip {
+               position: relative;
+               display: inline-block;
+               
+         }
+            .tooltip .tooltiptext {
+                 visibility: hidden;
+                 width: 120px;
+                 background-color: black;
+                 color: #fff;
+                 text-align: center;
+                 border-radius: 6px;
+                 padding: 5px 0;
+            /* Position the tooltip */
+                 position: absolute;
+                 z-index: 1;
+                 bottom: 100%;
+                 left: 50%;
+                 margin-left: -60px;
+         }
+            .tooltip:hover .tooltiptext {
+                 visibility: visible;
+          }
+          #myDIV{
+              display: none;
+          }
+           
+        </style>
+        <script>
+            function myFunction() {
+  var elmnt = document.getElementById("scroll");
+  var y = elmnt.scrollTop;
+  
+}
+var flag=0;
+function h(){
+             flag=1;
+            if(flag==1)
+            {
+            document.getElementById("1").style.visibility="hidden";
+            document.getElementById("2").style.visibility="visible";
+            flag=0;
+    }
+    
+}
+function o(){
+     if(flag==0){
+        
+        document.getElementById("1").style.visibility="visible";
+            document.getElementById("2").style.visibility="hidden";
+    }
+}
+
+        </script>
+    </head>
+    
+    <body>
+       <center>
+            <div class="w3-container">
+              <div id="main" class="w3-row">
+                  <div class="w3-col s2" style=" min-height: 90vh;">
+                      <a href="index.html"><img src="Title.png" style="width:170px; padding-top: 3px; height: 120px;"></a><br><br>
+                      <div class="on-scrollbar" onscroll="myFunction()" >
+                          <button class="ch" onmouseover="h();" onmouseout="o();">
+                              <img src="Ch-1.png" id="1" style="padding-left: 45px; height: 23px; width:78px;">
+                              <img src="Hover.png" height="50%" width="35%" id="2" style="visibility: hidden;"></button><br><br>
+                              <button class="ch" style="padding-left:37px;" onclick="Birbal();"><img src="Ch-2.png" height="58%" width="90%"></button><br><br>
+                        <button class="ch"><img src="Ch-3.png" height="60%" width="50%" ></button><br><br>
+                        <button class="ch"><img src="Ch-4.png" height="50%" width="45%" ></button><br><br>
+                        <button class="ch"><img src="Ch-5.png" height="50%" width="40%" ></button><br><br>
+                        <button class="ch"><img src="Ch-6.png" height="45%" width="40%" ></button><br><br>
+                        <button class="ch" style="padding-left:34px;"><img src="Ch-7.png" height="60%" width="85%" ></button><br><br>
+                        <button class="ch" style="padding-left:34px;"><img src="Ch-8.png" height="48%" width="85%" ></button><br><br>
+                        <button class="ch"><img src="Ch-9.png" height="48%" width="40%" ></button><br><br>
+                        <button class="ch" style="padding-left:34px;"><img src="Ch-10.png" height="50%" width="85%" ></button><br><br>
+                      </div >
+                      </div>
+                  
+                  
+                 <div id="z" class="w3-col s10">
+                   <div class="w3-container">
+                     <div class="w3-row">
+                         <div class="w3-col-s6" style="float: left;" id="page">
+                             <img src="page.png" style="height: 560px; width: 460px;" id="im1">
+                         </div>
+                         <div class="w3-col-s6" id="page1"><img src="Frontcover.jpg" style="height: 560px; width:460px;" id="im2"></div>
+                         <div class="w3-col s10" id="myDIV">
+                             <video id="video" height="200%" width="120%" style="padding-top: 18px;">
+                                 <source  src=" " type="video/mp4">
+                             </video></div> 
+                   
+                    </div>
+                </div>  
+                 </div>
+                  <div style=" height: 40px;">
+                      <button id="p" onclick="Animation()"><img src="Animation_Text.png" height="50%" width="80%"></button>
+                      <button id="p" onclick="Exercise()"><img src="Exercise_Text.png" height="48%" width="70%"></button>
+                      <button id="p" onclick="Slide()"><img src="Slideshow_Button_Text.png" height="50%" width="73%"></button>
+                      <button id="p" onclick="Quiz()"><img src="Quiz_Button_Text.png" height="47%" width="70%"></button>
+                      <button id="p" onclick="Yogyeta()"><img src="Yogyeta Vistaar_Text.png" height="57%" width="75%"></button>
+                      <button id="p" onclick="Concept()"><img src="Concept Map_Text.png" height="47%" width="75%"></button>
+                      <button id="p" onclick="Rachna()"><img src="Rachna ka sansaar_Text.png" height="50%" width="75%"></button>
+                      <button id="p" onclick="Life()"><img src="Life skills and Values_Text.png" height="50%" width="70%"></button>
+                      <button id="p" onclick="Vartini()"><img src="Vartini_Text.png" height="55%" width="80%"></button>
+                  </div>
+           <br><br>
+                  <div class="w3-col s12" id="y">
+                      <div class="tooltip">
+                          <span class="tooltiptext">Previous</span>
+                          <span id="prev"><img src="PrevButton.png" style="padding-top: 10px;height: 50px;"></span>
+                      </div>
+                      <img src="Seek_Box.png" style="padding-top: 10px;height: 50px;">
+                      <div class="tooltip">
+                          <span class="tooltiptext">Next</span>
+                          <span id="next"><img src="NextButton.png" style="padding-top: 10px;height: 50px;"></span> 
+                      </div>
+                  </div>
+        </div>
+     </div>
+
+       </center>
+    <!style="background-color: yellow; float: left; min-height: 88vh;width: 170px;"
+       style="background-color: greenyellow; float:bottom; height: 63px;" 
+        !>
+    <script>
+        // play video in parfticular div
+         var video=document.getElementById("video");
+         $(document).ready(function(){
+                 $("#p").click(function(){
+                 $("#myDIV").show();
+                 $("#page").hide();
+                 $("#page1").hide();
+            });
+                 $(".ch").click(function(){
+                 $("#myDIV").hide();
+                 $("#page").show();
+                 $("#page1").show();
+            });
+        });
+        function Animation(){
+            video.setAttribute('src','Birbal ki soojh boojh.mp4');
+            video.play();
+        }
+        function Slide(){
+            video.setAttribute('src','Slide show.mp4');
+            video.play();
+        }
+         function Quiz(){
+            video.setAttribute('src','Quiz Contest.mp4');
+            video.play();
+        }
+        function Yogyeta(){
+            video.setAttribute('src','Yogyta Vistar.mp4');
+            video.play();
+        }
+         function Concept(){
+            video.setAttribute('src','Concept Map.mp4');
+            video.play();
+        }
+         function Rachna(){
+            video.setAttribute('src','Rachnaa kaar.mp4');
+            video.play();
+        }
+        function Life(){
+            video.setAttribute('src','Lifeskill and Values.mp4');
+            video.play();
+        }
+        //next and prev function
+        var next = document.getElementById("next");
+        var prev = document.getElementById("prev");
+        var im1=document.getElementById("im1");
+        var im2=document.getElementById("im2");
+       
+        function Birbal(){
+             count = 0;
+                im1.setAttribute('src','Pg-14.jpg');
+                im2.setAttribute('src','Pg-15.jpg');
+            next.onclick = function() {
+            count += 1;
+             if(count==1){
+                im1.setAttribute('src','Pg-16.jpg');
+                im2.setAttribute('src','Pg-17.jpg');
+            }
+            else if(count==2){
+                im1.setAttribute('src','Pg-18.jpg');
+                im2.setAttribute('src','Pg-19.jpg');
+            }
+            }
+            prev.onclick=function(){
+                count=count-1;
+                if(count==1){
+                im1.setAttribute('src','Pg-16.jpg');
+                im2.setAttribute('src','Pg-17.jpg');
+            }
+            else if(count==0)
+            {
+                im1.setAttribute('src','Pg-14.jpg');
+                im2.setAttribute('src','Pg-15.jpg');
+            }
+            }
+        }
+        
+  
+
+
+    </script>
+</body>
+</html>
